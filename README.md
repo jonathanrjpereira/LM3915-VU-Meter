@@ -27,6 +27,10 @@ An audio volume level indicator using the LM3915.
 |Soldering Iron|[AliExpress](http://s.click.aliexpress.com/e/E83bSJI) |
 |Soldering Wire|[AliExpress](http://s.click.aliexpress.com/e/PdhB0nm) |
 |Mini PCB Hand Drill + Bits|[AliExpress](http://s.click.aliexpress.com/e/b93tomjI) |
+|Wire Cutter|[AliExpress](http://s.click.aliexpress.com/e/bHFL9vLi) |
+|Wire Stripper|[AliExpress](http://s.click.aliexpress.com/e/4yJWedw) |
+|Soldering Helping Hands|[AliExpress](http://s.click.aliexpress.com/e/cAQ2StNm) |
+
 
 ## LM3915
 
