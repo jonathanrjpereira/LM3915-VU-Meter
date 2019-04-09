@@ -6,20 +6,19 @@ An audio volume level indicator using the LM3915.
 ## Electronic Components
 | Qty | Component | Buy |
 | ------------- | ------------- | ------------- |
-| 1 | 555 |[AliExpress](http://s.click.aliexpress.com/e/sCv1ACC) |
-| 2 | 3KΩ Resistor |[AliExpress](http://s.click.aliexpress.com/e/bh4eqrQs) |
-| 4 | 10KΩ Resistor |[AliExpress](http://s.click.aliexpress.com/e/bh4eqrQs) |
-| 1 | 1MΩ Potentiometer |[AliExpress](http://s.click.aliexpress.com/e/bR23nRuG) |
-| 1 | IN4004 Diode |[AliExpress](http://s.click.aliexpress.com/e/HW1fm16) |
-| 2 | Tactile Momentary Push Buttons |[AliExpress](http://s.click.aliexpress.com/e/c77Ajrpq) |
-| 2 | 5mm LED |[AliExpress](http://s.click.aliexpress.com/e/wuFpLXS) |
-| 2 | 100uF Capacitor |[AliExpress](http://s.click.aliexpress.com/e/c9FHzl5W) |
-| 2 | 0.1uF (100nF) Capacitor |[AliExpress](http://s.click.aliexpress.com/e/byQG0DZW) |
+| 1 | LM3915 |[AliExpress](http://s.click.aliexpress.com/e/b1RIKGYY) |
+| 1 | LM386 |[AliExpress](http://s.click.aliexpress.com/e/cFr5ZTPS) |
+| 1 | IC Holders |[AliExpress](http://s.click.aliexpress.com/e/cHvnfsrA) |
+| 1 | Electret Condenser Microphone |[AliExpress](http://s.click.aliexpress.com/e/bSOOMYPe) |
+| 1 | 10Ω, 1KΩ, 4.7K, 10KΩ Resistor |[AliExpress](http://s.click.aliexpress.com/e/bh4eqrQs) |
+| 21 | 5mm LED |[AliExpress](http://s.click.aliexpress.com/e/wuFpLXS) |
+| 1 | 2.2uF, 100uF Capacitor |[AliExpress](http://s.click.aliexpress.com/e/c9FHzl5W) |
+| 2 | 10uF Capacitor |[AliExpress](http://s.click.aliexpress.com/e/c9FHzl5W) |
+| 1 | 10nF, 47nF, 0.1uF Capacitor |[AliExpress](http://s.click.aliexpress.com/e/byQG0DZW) |
 | 1 | 2 Pin Screw Terminal |[AliExpress](http://s.click.aliexpress.com/e/bj5UNUs0) |
-| 1 | 3 Pin Screw Terminal |[AliExpress](http://s.click.aliexpress.com/e/bj5UNUs0) |
-| 1 | 12VDC Relay |[AliExpress](http://s.click.aliexpress.com/e/xyrHlu8) |
-| 1 | 12VDC Adapter |[AliExpress](http://s.click.aliexpress.com/e/V0x0bms) |
-| 1 | SPDT Slide Switch |[AliExpress](http://s.click.aliexpress.com/e/cDjWUvjK) |
+| 1 | 3-Pin Male Header Pins |[AliExpress](http://s.click.aliexpress.com/e/bIN5SJXw) |
+| 1 | 2-Pin Jumper Cap |[AliExpress](http://s.click.aliexpress.com/e/BqfIU7O) |
+| 1 | 5VDC Adapter |[AliExpress](http://s.click.aliexpress.com/e/V0x0bms) |
 | 1 | PCB |[AliExpress](http://s.click.aliexpress.com/e/dhgwzKY) |
 
 
@@ -90,16 +89,12 @@ The inputs are ground referenced while the output automatically biases to one-ha
 
 **Circuit:**
 
-Electret Microphone
-LM386
-LM3915
-
 The microphone is an electret type and requires a resistor to bias the capacitor connected to it. Some electret microphones also have an amplifier built-in, which also needs power. The larger the resistor from VCC the larger the voltage drop caused by the supply current, though for an unamplified electret the current is low and the resistor may be bigger.
 A too small resistor will cause the signal to be attenuated. VCC is ground for AC signals and a small resistor will cause too much current to go that way. In this case the 10KΩ resistor R2 acts as the bias resistor.
 
 The capacitor C3 is used is used to filter the DC noise that might be coupled along with the analog electrical signals.
 
-![Schematic](https://github.com/jonathanrjpereira/LM3915-VU-Meter/tree/master/img/sch.png)
+![LM3915 VU Meter Circuit Schematic](https://github.com/jonathanrjpereira/LM3915-VU-Meter/blob/master/img/sch.png)
 
 The LM386 amplifies the audio signal picked up by the microphone. The gain of the LM386 is set to 200 by connecting a 10uF capacitor between pins 1 and 8.
 
@@ -109,13 +104,13 @@ The jumper connected across the header pins JP2 are used to select the display m
 
 Capacitor's C1 and C2 filter out any noise in the supply line and LED1 is used to indicate the power supply status.
 
-![Music Controlled Reactive LED Circuit Board PCB](https://github.com/jonathanrjpereira/LM3915-VU-Meter/tree/master/img/brd.png)
+![LM3915 VU Meter Board PCB](https://github.com/jonathanrjpereira/LM3915-VU-Meter/blob/master/img/brd.png)
 
 You can **Order the PCB:** []()
 
-![Printable](https://github.com/jonathanrjpereira/LM3915-VU-Meter/tree/master/img/printable.png)
+![Printable](https://github.com/jonathanrjpereira/LM3915-VU-Meter/blob/master/img/printable.png)
 
-Or you can printout the [PDF file](https://github.com/jonathanrjpereira/LM3915-VU-Meter/tree/master/img/printable.pdf) and make your own PCB using the [Iron-on method]().
+Or you can printout the [PDF file](https://github.com/jonathanrjpereira/LM3915-VU-Meter/blob/master/img/printable.pdf) and make your own PCB using the [Iron-on method]().
 
 ## Contributing🛠
 Are you an engineer or hobbyist who has a great idea for a new feature in this project? Maybe you have a good idea for a bug fix? Feel free to grab our code & schematics from Github and tinker with it. Don't forget to smash ⭐️ & the Pull Request button.
@@ -131,6 +126,6 @@ Are you an engineer or hobbyist who has a great idea for a new feature in this p
 [3]: https://github.com/jonathanrjpereira
 
 **References:**
-[LM3915 Datasheet](https://github.com/jonathanrjpereira/LM3915-VU-Meter/tree/master/img/LM3915.pdf)
+[LM3915 Datasheet](https://github.com/jonathanrjpereira/LM3915-VU-Meter/blob/master/img/LM3915.pdf)
 [LM386 Datasheet](http://www.ti.com/lit/ds/symlink/lm386.pdf)
 [Sparkfun](https://learn.sparkfun.com/tutorials/dotbar-display-driver-hookup-guide/introduction)
